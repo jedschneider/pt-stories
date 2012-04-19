@@ -1,4 +1,4 @@
-your(ns pt-stories.core
+(ns pt-stories.core
   (:use hiccup.core
         hiccup.page)
   (:require [clj-http.client :as client]))
@@ -22,7 +22,10 @@ your(ns pt-stories.core
       ]))
 
 (defn add-story
-  "adds a single story to your project"
+  "adds a single story to your project
+   example:
+   (story {:name \"test\" :labels [\"foo\"] :points 1 :description \"foo bar baz\" :type \"feature\"})
+   (add-story token project-id story)"
   [token project-id story]
   (let [url (clojure.string/join "/" [api-base "projects" project-id "stories"])
         body (build-xml-struct story)]
