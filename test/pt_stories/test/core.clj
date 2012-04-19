@@ -1,5 +1,5 @@
-(ns pt_stories.test.core
-  (:use [pt_stories.core])
+(ns pt-stories.test.core
+  (:use [pt-stories.core])
   (:use [clojure.test]))
 
 (deftest replace-me ;; FIXME: write
