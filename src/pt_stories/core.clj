@@ -1,4 +1,4 @@
-(ns pt-stories.core
+your(ns pt-stories.core
   (:use hiccup.core
         hiccup.page)
   (:require [clj-http.client :as client]))
@@ -32,8 +32,9 @@
        :body body})))
   
 (defn add-stories
-  "the method you can use to add all the stories in data: eg, (add-stories token project-id data)"
-  [token project-id stories]
+  "the method you can use to add all the stories in data: eg,
+   (add-stories {:token token :project-id project-id :stories data})"
+  [{:keys [token project-id stories]}]
   (doseq 
     [story stories] 
     (add-story token project-id story)))
