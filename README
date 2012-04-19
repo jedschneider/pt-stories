@@ -1,0 +1,16 @@
+# pt-stories
+
+A small lib to post stories to pivotal tracker
+
+## Usage
+
+clone
+install deps with lein
+get your token from your PT profile
+add your data to data in pt-stories.core
+
+## License
+
+Copyright (C) 2012 FIXME
+
+Distributed under the Eclipse Public License, the same as Clojure.
